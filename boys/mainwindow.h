@@ -7,6 +7,8 @@
 #include<QPushButton>
 #include<QGroupBox>
 #include<QLabel>
+#include<vector>
+using namespace std;
 
 namespace Ui {
 class MainWindow;
@@ -41,6 +43,12 @@ private:
     QGroupBox *gameBackground;
 
     QLabel *grade;
+
+    QLabel *rank1;
+    QLabel *rank2;
+    QLabel *rank3;
+
+    vector<int> ms;
 };
 
 #endif // MAINWINDOW_H

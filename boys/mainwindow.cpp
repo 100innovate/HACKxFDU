@@ -21,6 +21,7 @@ MainWindow::MainWindow(QWidget *parent) :
     hub("com.example.hello-myo")
 {
     ui->setupUi(this);
+    ms.resize(3);
     this->resize(800,600);
     this->setMaximumSize(800,600);
     this->setMinimumSize(800,600);
@@ -50,6 +51,26 @@ MainWindow::MainWindow(QWidget *parent) :
     grade->hide();
     grade->setText("您的最终得分:");
     grade->setStyleSheet("font-size:35px;font-family:STHUPO;color:#000000;border:0px groove gray;background: rgba(97%,80%,9%,0%);");
+
+    rank1=new QLabel(this);
+    rank2=new QLabel(this);
+    rank3=new QLabel(this);
+
+    rank1->hide();
+    rank2->hide();
+    rank3->hide();
+
+    rank1->setText("100");
+    rank2->setText("200");
+    rank3->setText("300");
+
+    rank1->setStyleSheet("font-size:30px;font-family:STHUPO;color:#000000;border:0px groove gray;background: rgba(97%,80%,9%,0%);");
+    rank2->setStyleSheet("font-size:30px;font-family:STHUPO;color:#000000;border:0px groove gray;background: rgba(97%,80%,9%,0%);");
+    rank3->setStyleSheet("font-size:30px;font-family:STHUPO;color:#000000;border:0px groove gray;background: rgba(97%,80%,9%,0%);");
+
+    rank1->setGeometry(320,250,400,30);
+    rank2->setGeometry(320,290,400,30);
+    rank3->setGeometry(320,330,400,30);
 }
 
 MainWindow::~MainWindow()
@@ -104,6 +125,28 @@ void MainWindow::playgame1()
 
     grade->show();
     grade->setText("您的最终成绩:    "+QString::number(now));
+
+    for(int i(0);i<3;i++){
+        if(now>ms[i]){
+            if(i==0){
+                ms[2]=ms[1];
+                ms[1]=ms[0];
+            }
+            if(i==1){
+                ms[2]=ms[1];
+            }
+            ms[i]=now;
+            break;
+        }
+    }
+
+    rank1->setText("第一名:"+QString::number(ms[0]));
+    rank2->setText("第二名:"+QString::number(ms[1]));
+    rank3->setText("第三名:"+QString::number(ms[2]));
+
+    rank1->show();
+    rank2->show();
+    rank3->show();
 }
 
 void MainWindow::playgame2()
@@ -139,6 +182,30 @@ void MainWindow::playgame2()
 
     grade->show();
     grade->setText("您的最终成绩:    "+QString::number(now));
+
+    for(int i(0);i<3;i++){
+        if(now>ms[i]){
+            if(i==0){
+                ms[2]=ms[1];
+                ms[1]=ms[0];
+            }
+            if(i==1){
+                ms[2]=ms[1];
+            }
+            ms[i]=now;
+            break;
+        }
+    }
+
+    rank1->setText("第一名:"+QString::number(ms[0]));
+    rank2->setText("第二名:"+QString::number(ms[1]));
+    rank3->setText("第三名:"+QString::number(ms[2]));
+
+    rank1->show();
+    rank2->show();
+    rank3->show();
+
+    QApplication::processEvents();
 }
 
 void MainWindow::reGame()
@@ -149,6 +216,10 @@ void MainWindow::reGame()
 
     grade->hide();
     restart->hide();
+
+    rank1->hide();
+    rank2->hide();
+    rank3->hide();
 
     ui->label_2->setText("0");
 }

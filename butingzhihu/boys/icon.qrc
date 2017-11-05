@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/index">
+        <file alias="index">index.png</file>
+        <file alias="125">12.jpg</file>
+        <file alias="135">13.jpg</file>
+        <file alias="13">13.png</file>
+        <file alias="145">14.jpg</file>
+        <file alias="215">21.jpg</file>
+        <file alias="235">23.jpg</file>
+        <file alias="245">24.jpg</file>
+        <file alias="24">24.png</file>
+        <file alias="26">26.png</file>
+        <file alias="rank">rank.png</file>
+        <file alias="a">a.jpg</file>
+        <file alias="d">d.jpg</file>
+        <file alias="s">s.jpg</file>
+        <file alias="w">w.jpg</file>
+        <file alias="1">幻灯片1.png</file>
+        <file alias="2">幻灯片2.png</file>
+        <file alias="3">幻灯片3.png</file>
+        <file alias="4">幻灯片4.png</file>
+        <file alias="5">幻灯片5.png</file>
+        <file alias="6">幻灯片6.png</file>
+        <file alias="7">幻灯片7.png</file>
+    </qresource>
+</RCC>

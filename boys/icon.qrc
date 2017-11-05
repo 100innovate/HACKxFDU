@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/index">
+        <file alias="index">index.png</file>
+        <file alias="125">12.jpg</file>
+        <file alias="135">13.jpg</file>
+        <file alias="13">13.png</file>
+        <file alias="145">14.jpg</file>
+        <file alias="215">21.jpg</file>
+        <file alias="235">23.jpg</file>
+        <file alias="245">24.jpg</file>
+        <file alias="24">24.png</file>
+        <file alias="26">26.png</file>
+        <file alias="rank">rank.png</file>
+    </qresource>
+</RCC>
